@@ -1,0 +1,39 @@
+main {
+  text-align: center;
+}
+
+.welcome-artist {
+  margin-top: 60px;
+}
+.welcome-artist input {
+  margin: 30px;
+  text-align: center;
+}
+.welcome-artist span {
+  margin: 20px;
+}
+
+.elements-row {
+  height: 15px;
+}
+
+.elements-container {
+  border: 2px solid aliceblue;
+}
+
+.colour-select, .canvas-select {
+  width: 200px;
+  margin: 30px;
+  text-align: center;
+}
+
+.canvas-select {
+  height: 35px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.row-canvas {
+  margin: 60px;
+}
