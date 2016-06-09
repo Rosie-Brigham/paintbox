@@ -6,23 +6,36 @@ class Elements extends Component {
     super(props)
   }
 
+  createElements(size, colour, brushAction) {
+    var array = []
+    for (var x = 0; x < size; x = x + 10) {
+      for (var y = 0; y < size; y = y + 10) {
+        array.push(<Element x={x} y={y} colour={colour} brushAction={brushAction}/>)
+      }
+    }
+    return array
+  }
+
   render(){
     let size = parseInt(this.props.size)
     let array = Array.apply(null, {length: size}).map(Number.call, Number)
 
     let colour = this.props.colour
     let brushAction = this.props.brush
-    const elements = array.map(function(e) {
-      return <div key={e} className='elements-row'>{
-        array.map(function(f) {
-          return <Element x={10} y={10} propKey={f} colour={colour} brushAction={brushAction}/>
-        })
-      }</div>
-    })
+    let dimension = this.props.size * 10
+
+    var styles = {
+      width: dimension + 'px',
+      height: dimension + 'px'
+    }
+
+    let elements= this.createElements(dimension, colour, brushAction)
 
     return(
       <div>
-        {elements}
+        <svg style={styles}>
+          {elements}
+        </svg>
       </div>
     )
   }

@@ -9,19 +9,20 @@ class Element extends Component {
     this.state = {hover: false, style: plain};
   }
 
-  mouseOver() {
+  handleUpdate() {
     const filled = {width: '15px', height: '15px', fill: this.props.colour }
     this.setState({hover: true, style: filled});
   }
 
   render () {
-    const styles = {width: '15px', height: '15px'}
-    console.log(this.props.brushAction)
+    const brushAction = { [this.props.brushAction]: this.handleUpdate.bind(this) }
 
     return (
-      <svg style={styles}>
-        <rect onMouseOver={this.mouseOver.bind(this)} key={this.props.propKey} style={this.state.style} />
-      </svg>
+      <rect {...brushAction}
+            key={this.props.propKey}
+            style={this.state.style}
+            x={this.props.x}
+            y={this.props.y} />
     )
   }
 }
