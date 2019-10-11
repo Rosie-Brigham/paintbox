@@ -22,14 +22,14 @@ main {
 }
 
 .colour-select, .canvas-select {
-  width: 200px;
-  margin: 30px;
+  width: 150px;
   text-align: center;
 }
 
 .canvas-select {
   height: 35px;
   width: 300px;
+  max-width: 100%;
   border-radius: 5px;
   border: 1px solid grey;
 }
