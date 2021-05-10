@@ -28,7 +28,7 @@
   "homepage": "https://github.com/Rosie-Brigham/react-play",
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "radium": "^0.26.0",
     "react-animate-height": "^2.0.16"
   },
